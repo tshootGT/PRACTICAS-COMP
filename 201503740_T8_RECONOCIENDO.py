@@ -1,6 +1,8 @@
 import cv2
 import os
 
+from matplotlib import image
+
 dataPath = 'C:/Users/mwx810280/Documents/usac/2022/PRIMER SEMESTRE/PROYECTOS DE COMP/Tarea8/data' 
 imagePaths = os.listdir(dataPath)
 print('imagePaths=',imagePaths)
@@ -38,6 +40,7 @@ while True:
 		if result[1] < 4620:
 			cv2.putText(frame,'{}'.format(imagePaths[result[0]]),(x,y-25),2,1.1,(0,255,0),1,cv2.LINE_AA)
 			cv2.rectangle(frame, (x,y),(x+w,y+h),(0,255,0),2)
+			print("nombre:",'{}'.format(imagePaths[result[0]]))
 		else:
 			cv2.putText(frame,'Desconocido',(x,y-20),2,0.8,(0,0,255),1,cv2.LINE_AA)
 			cv2.rectangle(frame, (x,y),(x+w,y+h),(0,0,255),2)
@@ -46,6 +49,7 @@ while True:
 		if result[1] < 4530:
 			cv2.putText(frame,'{}'.format(imagePaths[result[0]]),(x,y-25),2,1.1,(0,255,0),1,cv2.LINE_AA)
 			cv2.rectangle(frame, (x,y),(x+w,y+h),(0,255,0),2)
+			print("nombre:",'{}'.format(imagePaths[result[0]]))
 		else:
 			cv2.putText(frame,'Desconocido',(x,y-20),2,0.8,(0,0,255),1,cv2.LINE_AA)
 			cv2.rectangle(frame, (x,y),(x+w,y+h),(0,0,255),2)
@@ -53,6 +57,7 @@ while True:
 		if result[1] < 5956:
 			cv2.putText(frame,'{}'.format(imagePaths[result[0]]),(x,y-25),2,1.1,(0,255,0),1,cv2.LINE_AA)
 			cv2.rectangle(frame, (x,y),(x+w,y+h),(0,255,0),2)
+			print("nombre:",'{}'.format(imagePaths[result[0]]))
 		else:
 			cv2.putText(frame,'Desconocido',(x,y-20),2,0.8,(0,0,255),1,cv2.LINE_AA)
 			cv2.rectangle(frame, (x,y),(x+w,y+h),(0,0,255),2)
